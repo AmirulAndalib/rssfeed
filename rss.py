@@ -55,385 +55,385 @@ if os.environ.get("ENV"):   # Add a ENV in Environment Variables if you wanna co
   check_interval = int(os.environ.get("INTERVAL", 5))
   max_instances = int(os.environ.get("MAX_INSTANCES", 5))
 
-if db.get_link(feed_url) == None:
-   db.update_link(feed_url, "*")
+if db.get_link(feed_url) is None:
+  db.update_link(feed_url, "*")
 
 app = Client(":memory:", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
 def check_feed():
-    FEED = feedparser.parse(feed_url)
-    entry = FEED.entries[0]
-    if entry.id != db.get_link(feed_url).link:
-                   # ↓ Edit this message as your needs.
-      message = f"/mirror {entry.link}"
-      try:
-        app.send_message(log_channel, message)
-        db.update_link(feed_url, entry.id)
-      except FloodWait as e:
-        print(f"FloodWait: {e.x} seconds")
-        sleep(e.x)
-      except Exception as e:
-        print(e)
-    else:
-      print(f"Checked RSS FEED - RARBG Movies")
+  FEED = feedparser.parse(feed_url)
+  entry = FEED.entries[0]
+  if entry.id != db.get_link(feed_url).link:
+                 # ↓ Edit this message as your needs.
+    message = f"/mirror {entry.link}"
+    try:
+      app.send_message(log_channel, message)
+      db.update_link(feed_url, entry.id)
+    except FloodWait as e:
+      print(f"FloodWait: {e.x} seconds")
+      sleep(e.x)
+    except Exception as e:
+      print(e)
+  else:
+    print('Checked RSS FEED - RARBG Movies')
 
-if db.get_link(feed_url1) == None:
-   db.update_link(feed_url1, "*")
+if db.get_link(feed_url1) is None:
+  db.update_link(feed_url1, "*")
 
 app = Client(":memory:", api_id=api_id, api_hash=api_hash, bot_token=bot_token)      
       
 def check_feed1():
-    FEED = feedparser.parse(feed_url1)
-    entry = FEED.entries[0]
-    if entry.id != db.get_link(feed_url1).link:
-                   # ↓ Edit this message as your needs.
-      message = f"/mirror {entry.link}"
-      try:
-        app.send_message(log_channel, message)
-        db.update_link(feed_url1, entry.id)
-      except FloodWait as e:
-        print(f"FloodWait: {e.x} seconds")
-        sleep(e.x)
-      except Exception as e:
-        print(e)
-    else:
-      print(f"Checked RSS FEED1 - Will1869")
+  FEED = feedparser.parse(feed_url1)
+  entry = FEED.entries[0]
+  if entry.id != db.get_link(feed_url1).link:
+                 # ↓ Edit this message as your needs.
+    message = f"/mirror {entry.link}"
+    try:
+      app.send_message(log_channel, message)
+      db.update_link(feed_url1, entry.id)
+    except FloodWait as e:
+      print(f"FloodWait: {e.x} seconds")
+      sleep(e.x)
+    except Exception as e:
+      print(e)
+  else:
+    print('Checked RSS FEED1 - Will1869')
 
-if db.get_link(feed_url2) == None:
-   db.update_link(feed_url2, "*")
+if db.get_link(feed_url2) is None:
+  db.update_link(feed_url2, "*")
 
 app = Client(":memory:", api_id=api_id, api_hash=api_hash, bot_token=bot_token)      
       
 def check_feed2():
-    FEED = feedparser.parse(feed_url2)
-    entry = FEED.entries[0]
-    if entry.id != db.get_link(feed_url2).link:
-                   # ↓ Edit this message as your needs.
-      message = f"/dank {entry.link}"
-      try:
-        app.send_message(log_channel, message)
-        db.update_link(feed_url2, entry.id)
-      except FloodWait as e:
-        print(f"FloodWait: {e.x} seconds")
-        sleep(e.x)
-      except Exception as e:
-        print(e)
-    else:
-      print(f"Checked RSS FEED2 - RARBG TV")
+  FEED = feedparser.parse(feed_url2)
+  entry = FEED.entries[0]
+  if entry.id != db.get_link(feed_url2).link:
+                 # ↓ Edit this message as your needs.
+    message = f"/dank {entry.link}"
+    try:
+      app.send_message(log_channel, message)
+      db.update_link(feed_url2, entry.id)
+    except FloodWait as e:
+      print(f"FloodWait: {e.x} seconds")
+      sleep(e.x)
+    except Exception as e:
+      print(e)
+  else:
+    print('Checked RSS FEED2 - RARBG TV')
 
-if db.get_link(feed_url3) == None:
-   db.update_link(feed_url3, "*")
+if db.get_link(feed_url3) is None:
+  db.update_link(feed_url3, "*")
 
 app = Client(":memory:", api_id=api_id, api_hash=api_hash, bot_token=bot_token)      
       
 def check_feed3():
-    FEED = feedparser.parse(feed_url3)
-    entry = FEED.entries[0]
-    if entry.id != db.get_link(feed_url3).link:
-                   # ↓ Edit this message as your needs.
-      message = f"/dank {entry.link}"
-      try:
-        app.send_message(log_channel, message)
-        db.update_link(feed_url3, entry.id)
-      except FloodWait as e:
-        print(f"FloodWait: {e.x} seconds")
-        sleep(e.x)
-      except Exception as e:
-        print(e)
-    else:
-      print(f"Checked RSS FEED3 - Vyndros")    
+  FEED = feedparser.parse(feed_url3)
+  entry = FEED.entries[0]
+  if entry.id != db.get_link(feed_url3).link:
+                 # ↓ Edit this message as your needs.
+    message = f"/dank {entry.link}"
+    try:
+      app.send_message(log_channel, message)
+      db.update_link(feed_url3, entry.id)
+    except FloodWait as e:
+      print(f"FloodWait: {e.x} seconds")
+      sleep(e.x)
+    except Exception as e:
+      print(e)
+  else:
+    print('Checked RSS FEED3 - Vyndros')    
 
-if db.get_link(feed_url4) == None:
-   db.update_link(feed_url4, "*")
+if db.get_link(feed_url4) is None:
+  db.update_link(feed_url4, "*")
 
 app = Client(":memory:", api_id=api_id, api_hash=api_hash, bot_token=bot_token)      
       
 def check_feed4():
-    FEED = feedparser.parse(feed_url4)
-    entry = FEED.entries[0]
-    if entry.id != db.get_link(feed_url4).link:
-                   # ↓ Edit this message as your needs.
-      message = f"/dank {entry.link}"
-      try:
-        app.send_message(log_channel, message)
-        db.update_link(feed_url4, entry.id)
-      except FloodWait as e:
-        print(f"FloodWait: {e.x} seconds")
-        sleep(e.x)
-      except Exception as e:
-        print(e)
-    else:
-      print(f"Checked RSS FEED4 - deef")      
+  FEED = feedparser.parse(feed_url4)
+  entry = FEED.entries[0]
+  if entry.id != db.get_link(feed_url4).link:
+                 # ↓ Edit this message as your needs.
+    message = f"/dank {entry.link}"
+    try:
+      app.send_message(log_channel, message)
+      db.update_link(feed_url4, entry.id)
+    except FloodWait as e:
+      print(f"FloodWait: {e.x} seconds")
+      sleep(e.x)
+    except Exception as e:
+      print(e)
+  else:
+    print('Checked RSS FEED4 - deef')      
 
-if db.get_link(feed_url5) == None:
-   db.update_link(feed_url5, "*")
+if db.get_link(feed_url5) is None:
+  db.update_link(feed_url5, "*")
 
 app = Client(":memory:", api_id=api_id, api_hash=api_hash, bot_token=bot_token)     
       
 def check_feed5():
-    FEED = feedparser.parse(feed_url5)
-    entry = FEED.entries[0]
-    if entry.title != db.get_link(feed_url5).link:
-                   # ↓ Edit this message as your needs.
-      message = f"/dank {entry.link}"
-      try:
-        app.send_message(log_channel, message)
-        db.update_link(feed_url5, entry.title)
-      except FloodWait as e:
-        print(f"FloodWait: {e.x} seconds")
-        sleep(e.x)
-      except Exception as e:
-        print(e)
-    else:
-      print(f"Checked RSS FEED5 - milkie TV")     
+  FEED = feedparser.parse(feed_url5)
+  entry = FEED.entries[0]
+  if entry.title != db.get_link(feed_url5).link:
+                 # ↓ Edit this message as your needs.
+    message = f"/dank {entry.link}"
+    try:
+      app.send_message(log_channel, message)
+      db.update_link(feed_url5, entry.title)
+    except FloodWait as e:
+      print(f"FloodWait: {e.x} seconds")
+      sleep(e.x)
+    except Exception as e:
+      print(e)
+  else:
+    print('Checked RSS FEED5 - milkie TV')     
 
-if db.get_link(feed_url6) == None:
-   db.update_link(feed_url6, "*")
+if db.get_link(feed_url6) is None:
+  db.update_link(feed_url6, "*")
 
 app = Client(":memory:", api_id=api_id, api_hash=api_hash, bot_token=bot_token)      
       
 def check_feed6():
-    FEED = feedparser.parse(feed_url6)
-    entry = FEED.entries[0]
-    if entry.id != db.get_link(feed_url6).link:
-                   # ↓ Edit this message as your needs.
-      message = f"/mirror {entry.link}"
-      try:
-        app.send_message(log_channel, message)
-        db.update_link(feed_url6, entry.id)
-      except FloodWait as e:
-        print(f"FloodWait: {e.x} seconds")
-        sleep(e.x)
-      except Exception as e:
-        print(e)
-    else:
-      print(f"Checked RSS FEED6 - CAT 4K")   
+  FEED = feedparser.parse(feed_url6)
+  entry = FEED.entries[0]
+  if entry.id != db.get_link(feed_url6).link:
+                 # ↓ Edit this message as your needs.
+    message = f"/mirror {entry.link}"
+    try:
+      app.send_message(log_channel, message)
+      db.update_link(feed_url6, entry.id)
+    except FloodWait as e:
+      print(f"FloodWait: {e.x} seconds")
+      sleep(e.x)
+    except Exception as e:
+      print(e)
+  else:
+    print('Checked RSS FEED6 - CAT 4K')   
 
-if db.get_link(feed_url7) == None:
-   db.update_link(feed_url7, "*")
+if db.get_link(feed_url7) is None:
+  db.update_link(feed_url7, "*")
 
 app = Client(":memory:", api_id=api_id, api_hash=api_hash, bot_token=bot_token)      
       
 def check_feed7():
-    FEED = feedparser.parse(feed_url7)
-    entry = FEED.entries[0]
-    if entry.id != db.get_link(feed_url7).link:
-                   # ↓ Edit this message as your needs.
-      message = f"/dank {entry.link}"
-      try:
-        app.send_message(log_channel, message)
-        db.update_link(feed_url7, entry.id)
-      except FloodWait as e:
-        print(f"FloodWait: {e.x} seconds")
-        sleep(e.x)
-      except Exception as e:
-        print(e)
-    else:
-      print(f"Checked RSS FEED7 - ZMNT")  
+  FEED = feedparser.parse(feed_url7)
+  entry = FEED.entries[0]
+  if entry.id != db.get_link(feed_url7).link:
+                 # ↓ Edit this message as your needs.
+    message = f"/dank {entry.link}"
+    try:
+      app.send_message(log_channel, message)
+      db.update_link(feed_url7, entry.id)
+    except FloodWait as e:
+      print(f"FloodWait: {e.x} seconds")
+      sleep(e.x)
+    except Exception as e:
+      print(e)
+  else:
+    print('Checked RSS FEED7 - ZMNT')  
       
 
-if db.get_link(feed_url8) == None:
-   db.update_link(feed_url8, "*")
+if db.get_link(feed_url8) is None:
+  db.update_link(feed_url8, "*")
 
 app = Client(":memory:", api_id=api_id, api_hash=api_hash, bot_token=bot_token)      
       
 def check_feed8():
-    FEED = feedparser.parse(feed_url8)
-    entry = FEED.entries[0]
-    if entry.id != db.get_link(feed_url8).link:
-                   # ↓ Edit this message as your needs.
-      message = f"/dank {entry.link}"
-      try:
-        app.send_message(log_channel, message)
-        db.update_link(feed_url8, entry.id)
-      except FloodWait as e:
-        print(f"FloodWait: {e.x} seconds")
-        sleep(e.x)
-      except Exception as e:
-        print(e)
-    else:
-      print(f"Checked RSS FEED8 - TV Pack")  
+  FEED = feedparser.parse(feed_url8)
+  entry = FEED.entries[0]
+  if entry.id != db.get_link(feed_url8).link:
+                 # ↓ Edit this message as your needs.
+    message = f"/dank {entry.link}"
+    try:
+      app.send_message(log_channel, message)
+      db.update_link(feed_url8, entry.id)
+    except FloodWait as e:
+      print(f"FloodWait: {e.x} seconds")
+      sleep(e.x)
+    except Exception as e:
+      print(e)
+  else:
+    print('Checked RSS FEED8 - TV Pack')  
       
 
-if db.get_link(feed_url9) == None:
-   db.update_link(feed_url9, "*")
+if db.get_link(feed_url9) is None:
+  db.update_link(feed_url9, "*")
 
 app = Client(":memory:", api_id=api_id, api_hash=api_hash, bot_token=bot_token)      
       
 def check_feed9():
-    FEED = feedparser.parse(feed_url9)
-    entry = FEED.entries[0]
-    if entry.id != db.get_link(feed_url9).link:
-                   # ↓ Edit this message as your needs.
-      message = f"/mirror {entry.link}"
-      try:
-        app.send_message(log_channel, message)
-        db.update_link(feed_url9, entry.id)
-      except FloodWait as e:
-        print(f"FloodWait: {e.x} seconds")
-        sleep(e.x)
-      except Exception as e:
-        print(e)
-    else:
-      print(f"Checked RSS FEED9 - T0M")  
+  FEED = feedparser.parse(feed_url9)
+  entry = FEED.entries[0]
+  if entry.id != db.get_link(feed_url9).link:
+                 # ↓ Edit this message as your needs.
+    message = f"/mirror {entry.link}"
+    try:
+      app.send_message(log_channel, message)
+      db.update_link(feed_url9, entry.id)
+    except FloodWait as e:
+      print(f"FloodWait: {e.x} seconds")
+      sleep(e.x)
+    except Exception as e:
+      print(e)
+  else:
+    print('Checked RSS FEED9 - T0M')  
 
 
-if db.get_link(feed_url10) == None:
-   db.update_link(feed_url10, "*")
+if db.get_link(feed_url10) is None:
+  db.update_link(feed_url10, "*")
 
 app = Client(":memory:", api_id=api_id, api_hash=api_hash, bot_token=bot_token)      
       
 def check_feed10():
-    FEED = feedparser.parse(feed_url10)
-    entry = FEED.entries[0]
-    if entry.id != db.get_link(feed_url10).link:
-                   # ↓ Edit this message as your needs.
-      message = f"/get {entry.enclosures[0]['href']}"
-      try:
-        app.send_message(log_channel, message)
-        db.update_link(feed_url10, entry.id)
-      except FloodWait as e:
-        print(f"FloodWait: {e.x} seconds")
-        sleep(e.x)
-      except Exception as e:
-        print(e)
-    else:
-      print(f"Checked RSS FEED10 - LHD REMUX")        
+  FEED = feedparser.parse(feed_url10)
+  entry = FEED.entries[0]
+  if entry.id != db.get_link(feed_url10).link:
+                 # ↓ Edit this message as your needs.
+    message = f"/get {entry.enclosures[0]['href']}"
+    try:
+      app.send_message(log_channel, message)
+      db.update_link(feed_url10, entry.id)
+    except FloodWait as e:
+      print(f"FloodWait: {e.x} seconds")
+      sleep(e.x)
+    except Exception as e:
+      print(e)
+  else:
+    print('Checked RSS FEED10 - LHD REMUX')        
       
 
-if db.get_link(feed_url11) == None:
-   db.update_link(feed_url11, "*")
+if db.get_link(feed_url11) is None:
+  db.update_link(feed_url11, "*")
 
 app = Client(":memory:", api_id=api_id, api_hash=api_hash, bot_token=bot_token)      
       
 def check_feed11():
-    FEED = feedparser.parse(feed_url11)
-    entry = FEED.entries[0]
-    if entry.title != db.get_link(feed_url11).link:
-                   # ↓ Edit this message as your needs.
-      message = f"/mirror {entry.link}"
-      try:
-        app.send_message(log_channel, message)
-        db.update_link(feed_url11, entry.title)
-      except FloodWait as e:
-        print(f"FloodWait: {e.x} seconds")
-        sleep(e.x)
-      except Exception as e:
-        print(e)
-    else:
-      print(f"Checked RSS FEED11 - milkie Movies")  
+  FEED = feedparser.parse(feed_url11)
+  entry = FEED.entries[0]
+  if entry.title != db.get_link(feed_url11).link:
+                 # ↓ Edit this message as your needs.
+    message = f"/mirror {entry.link}"
+    try:
+      app.send_message(log_channel, message)
+      db.update_link(feed_url11, entry.title)
+    except FloodWait as e:
+      print(f"FloodWait: {e.x} seconds")
+      sleep(e.x)
+    except Exception as e:
+      print(e)
+  else:
+    print('Checked RSS FEED11 - milkie Movies')  
       
 
-if db.get_link(feed_url12) == None:
-   db.update_link(feed_url12, "*")
+if db.get_link(feed_url12) is None:
+  db.update_link(feed_url12, "*")
 
 app = Client(":memory:", api_id=api_id, api_hash=api_hash, bot_token=bot_token)      
       
 def check_feed12():
-    FEED = feedparser.parse(feed_url12)
-    entry = FEED.entries[0]
-    if entry.title != db.get_link(feed_url12).link:
-      if 'remux' in entry.title.lower():
-                   # ↓ Edit this message as your needs.
-        message = f"/kink {entry.link}"
-        try:
-          app.send_message(log_channel, message)
-          db.update_link(feed_url12, entry.title)
-        except FloodWait as e:
-          print(f"FloodWait: {e.x} seconds")
-          sleep(e.x)
-        except Exception as e:
-          print(e)
-    else:
-      print(f"Checked RSS FEED12 - FileList")        
+  FEED = feedparser.parse(feed_url12)
+  entry = FEED.entries[0]
+  if entry.title == db.get_link(feed_url12).link:
+    print('Checked RSS FEED12 - FileList')        
 
-if db.get_link(feed_url13) == None:
-   db.update_link(feed_url13, "*")
+  elif 'remux' in entry.title.lower():
+               # ↓ Edit this message as your needs.
+    message = f"/kink {entry.link}"
+    try:
+      app.send_message(log_channel, message)
+      db.update_link(feed_url12, entry.title)
+    except FloodWait as e:
+      print(f"FloodWait: {e.x} seconds")
+      sleep(e.x)
+    except Exception as e:
+      print(e)        
+
+if db.get_link(feed_url13) is None:
+  db.update_link(feed_url13, "*")
 
 app = Client(":memory:", api_id=api_id, api_hash=api_hash, bot_token=bot_token)      
       
 def check_feed13():
-    FEED = feedparser.parse(feed_url13)
-    entry = FEED.entries[0]
-    if entry.id != db.get_link(feed_url13).link:
-                   # ↓ Edit this message as your needs.
-      message = f"/get {entry.enclosures[0]['href']}"
-      try:
-        app.send_message(log_channel, message)
-        db.update_link(feed_url13, entry.id)
-      except FloodWait as e:
-        print(f"FloodWait: {e.x} seconds")
-        sleep(e.x)
-      except Exception as e:
-        print(e)
-    else:
-      print(f"Checked RSS FEED13 - LHD Encodes+WEB")         
+  FEED = feedparser.parse(feed_url13)
+  entry = FEED.entries[0]
+  if entry.id != db.get_link(feed_url13).link:
+                 # ↓ Edit this message as your needs.
+    message = f"/get {entry.enclosures[0]['href']}"
+    try:
+      app.send_message(log_channel, message)
+      db.update_link(feed_url13, entry.id)
+    except FloodWait as e:
+      print(f"FloodWait: {e.x} seconds")
+      sleep(e.x)
+    except Exception as e:
+      print(e)
+  else:
+    print('Checked RSS FEED13 - LHD Encodes+WEB')         
       
-if db.get_link(feed_url14) == None:
-   db.update_link(feed_url14, "*")
+if db.get_link(feed_url14) is None:
+  db.update_link(feed_url14, "*")
 
 app = Client(":memory:", api_id=api_id, api_hash=api_hash, bot_token=bot_token)      
       
 def check_feed14():
-    FEED = feedparser.parse(feed_url14)
-    entry = FEED.entries[0]
-    if entry.id != db.get_link(feed_url14).link:
-                   # ↓ Edit this message as your needs.
-      message = f"/mirror {entry.link}"
-      try:
-        app.send_message(log_channel, message)
-        db.update_link(feed_url14, entry.id)
-      except FloodWait as e:
-        print(f"FloodWait: {e.x} seconds")
-        sleep(e.x)
-      except Exception as e:
-        print(e)
-    else:
-      print(f"Checked RSS FEED14 - GhosT")
+  FEED = feedparser.parse(feed_url14)
+  entry = FEED.entries[0]
+  if entry.id != db.get_link(feed_url14).link:
+                 # ↓ Edit this message as your needs.
+    message = f"/mirror {entry.link}"
+    try:
+      app.send_message(log_channel, message)
+      db.update_link(feed_url14, entry.id)
+    except FloodWait as e:
+      print(f"FloodWait: {e.x} seconds")
+      sleep(e.x)
+    except Exception as e:
+      print(e)
+  else:
+    print('Checked RSS FEED14 - GhosT')
       
-if db.get_link(feed_url15) == None:
-   db.update_link(feed_url15, "*")
+if db.get_link(feed_url15) is None:
+  db.update_link(feed_url15, "*")
 
 app = Client(":memory:", api_id=api_id, api_hash=api_hash, bot_token=bot_token)      
       
 def check_feed15():
-    FEED = feedparser.parse(feed_url15)
-    entry = FEED.entries[0]
-    if entry.id != db.get_link(feed_url15).link:
-                   # ↓ Edit this message as your needs.
-      message = f"{entry.link}"
-      try:
-        app.send_message(log_channel, message)
-        db.update_link(feed_url15, entry.id)
-      except FloodWait as e:
-        print(f"FloodWait: {e.x} seconds")
-        sleep(e.x)
-      except Exception as e:
-        print(e)
-    else:
-      print(f"Checked RSS FEED15 - Dummy")
+  FEED = feedparser.parse(feed_url15)
+  entry = FEED.entries[0]
+  if entry.id != db.get_link(feed_url15).link:
+                 # ↓ Edit this message as your needs.
+    message = f"{entry.link}"
+    try:
+      app.send_message(log_channel, message)
+      db.update_link(feed_url15, entry.id)
+    except FloodWait as e:
+      print(f"FloodWait: {e.x} seconds")
+      sleep(e.x)
+    except Exception as e:
+      print(e)
+  else:
+    print('Checked RSS FEED15 - Dummy')
       
-if db.get_link(feed_url16) == None:
-   db.update_link(feed_url16, "*")
+if db.get_link(feed_url16) is None:
+  db.update_link(feed_url16, "*")
 
 app = Client(":memory:", api_id=api_id, api_hash=api_hash, bot_token=bot_token)      
       
 def check_feed16():
-    FEED = feedparser.parse(feed_url16)
-    entry = FEED.entries[0]
-    if entry.id != db.get_link(feed_url16).link:
-                   # ↓ Edit this message as your needs.
-      message = f"/mirror {entry.link}"
-      try:
-        app.send_message(log_channel, message)
-        db.update_link(feed_url16, entry.id)
-      except FloodWait as e:
-        print(f"FloodWait: {e.x} seconds")
-        sleep(e.x)
-      except Exception as e:
-        print(e)
-    else:
-      print(f"Checked RSS FEED16 - Grym")      
+  FEED = feedparser.parse(feed_url16)
+  entry = FEED.entries[0]
+  if entry.id != db.get_link(feed_url16).link:
+                 # ↓ Edit this message as your needs.
+    message = f"/mirror {entry.link}"
+    try:
+      app.send_message(log_channel, message)
+      db.update_link(feed_url16, entry.id)
+    except FloodWait as e:
+      print(f"FloodWait: {e.x} seconds")
+      sleep(e.x)
+    except Exception as e:
+      print(e)
+  else:
+    print('Checked RSS FEED16 - Grym')      
       
 scheduler = BackgroundScheduler()
 scheduler.add_job(check_feed, "interval", seconds=check_interval, max_instances=max_instances, misfire_grace_time=None)
